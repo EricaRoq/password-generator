@@ -24,6 +24,33 @@ if (resultSpecial || resultNumeric || resultLower || resultUpper) {
   return "";
 }
 
+var creatingPassword = [];
+var counter = 1;
+
+for (let index = 1; index <= lengthOfPassword; index = counter) {
+  if (resultSpecial == true && counter <= lengthOfPassword) {
+    getRandomSymbol();
+    counter++;
+  }
+
+  if (resultNumeric == true && counter <= lengthOfPassword) {
+    getNumber();
+    counter++;
+  }
+
+  if (resultLower == true && counter <= lengthOfPassword) {
+    getLower();
+    counter++;
+  }
+
+  if (resultUpper == true && counter <= lengthOfPassword) {
+    getUpper();
+    counter++;
+  }
+}
+
+
+
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
