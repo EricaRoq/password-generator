@@ -49,6 +49,22 @@ for (let index = 1; index <= lengthOfPassword; index = counter) {
   }
 }
 
+// Random character
+function getRandomSymbol() {
+  var symbol = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
+  var holdSymbol = symbol[Math.floor(Math.random() * symbol.length)];
+  
+  creatingPassword.push(holdSymbol);
+}
+
+// Random Uppercase
+function getUpper() {
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var holdUpper = upperCase[Math.floor(Math.random() * upperCase.length)];
+
+  creatingPassword.push(holdUpper);
+}
+
 
 
 var generateBtn = document.querySelector("#generate");
