@@ -73,6 +73,14 @@ function getLower() {
   creatingPassword.push(holdLower);
 }
 
+// Random Number
+function getNumber() {
+  var number1 = "1234567890";
+  var holdNumber = number1[Math.floor(Math.random() * number1.length)];
+
+  creatingPassword.push(holdNumber);
+}
+
 
 
 var generateBtn = document.querySelector("#generate");
