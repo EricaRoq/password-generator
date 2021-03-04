@@ -65,6 +65,14 @@ function getUpper() {
   creatingPassword.push(holdUpper);
 }
 
+// Random Lower
+function getLower() {
+  var lowercase = "abcdefghijklmnopqrstuvwxyz";
+  var holdLower = lowercase[Math.floor(Math.random() * lowercase.length)];
+
+  creatingPassword.push(holdLower);
+}
+
 
 
 var generateBtn = document.querySelector("#generate");
