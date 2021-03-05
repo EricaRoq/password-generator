@@ -20,7 +20,7 @@ you then choose lowercase, uppercase, numeric, and/or special characters.
 -When your password is generated, the password is either displayed in an alert or written to the page.
 
 # Screenshot
-![](develop/images/demo.PNG)
+![](./develop/images/demo.png)
 
 # Link to deployed application
 
