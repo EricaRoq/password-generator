@@ -27,4 +27,5 @@ you then choose lowercase, uppercase, numeric, and/or special characters.
 
 # Resources and contributers
 
--www.w3schools.com
+* www.w3schools.com
+* Anthony Davis (cohort)
