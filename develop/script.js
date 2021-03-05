@@ -41,7 +41,7 @@ var counter = 1;
 
 for (let index = 1; index <= lengthOfPassword; index = counter) {
   if (includeSpecial == true && counter <= lengthOfPassword) {
-    getRandomSymbol();
+    getSymbol();
     counter++;
   }
 
@@ -59,6 +59,14 @@ for (let index = 1; index <= lengthOfPassword; index = counter) {
     getUpper();
     counter++;
   }
+}
+
+// Symbal character
+function getSymbol() {
+  var symbol = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
+  var holdSymbol = symbol[Math.floor(Math.random() * symbol.length)];
+  
+  creatingPassword.push(holdSymbol);
 }
 
 
