@@ -69,6 +69,24 @@ function getSymbol() {
   creatingPassword.push(holdSymbol);
 }
 
+// Uppercase character
+function getUpper() {
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var holdUpper = upperCase[Math.floor(Math.random() * upperCase.length)];
+
+  creatingPassword.push(holdUpper);
+}
+
+// Lowercase character
+function getLower() {
+  var lowercase = "abcdefghijklmnopqrstuvwxyz";
+  var holdLower = lowercase[Math.floor(Math.random() * lowercase.length)];
+
+  creatingPassword.push(holdLower);
+}
+
+
+
 
 
 // Add event listener to generate button
