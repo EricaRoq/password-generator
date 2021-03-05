@@ -39,6 +39,7 @@ if (includeSpecial || includeNumber || includeLower || includeUpper) {
 var creatingPassword = [];
 var counter = 1;
 
+// For loop
 for (let index = 1; index <= lengthOfPassword; index = counter) {
   if (includeSpecial == true && counter <= lengthOfPassword) {
     getSymbol();
@@ -85,9 +86,17 @@ function getLower() {
   creatingPassword.push(holdLower);
 }
 
+// Number character
+function getNumber() {
+  var number1 = "1234567890";
+  var holdNumber = number1[Math.floor(Math.random() * number1.length)];
 
+  creatingPassword.push(holdNumber);
+}
 
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+}
