@@ -45,6 +45,23 @@ for (let index = 1; index <= lengthOfPassword; index = counter) {
     counter++;
   }
 
+  if (includeNumeric == true && counter <= lengthOfPassword) {
+    getNumber();
+    counter++;
+  }
+
+  if (includeLower == true && counter <= lengthOfPassword) {
+    getLower();
+    counter++;
+  }
+
+  if (includeUpper == true && counter <= lengthOfPassword) {
+    getUpper();
+    counter++;
+  }
+}
+
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
