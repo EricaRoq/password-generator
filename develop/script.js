@@ -1,6 +1,6 @@
 debugger;
 // Assignment Code
-var generateBtn = document.querySelector("#genenrate");
+var generateBtn = document.querySelector("#genenrate"); 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
