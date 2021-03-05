@@ -36,7 +36,14 @@ if (includeSpecial || includeNumber || includeLower || includeUpper) {
   return "";
 }
 
+var creatingPassword = [];
+var counter = 1;
 
+for (let index = 1; index <= lengthOfPassword; index = counter) {
+  if (includeSpecial == true && counter <= lengthOfPassword) {
+    getRandomSymbol();
+    counter++;
+  }
 
 
 // Add event listener to generate button
