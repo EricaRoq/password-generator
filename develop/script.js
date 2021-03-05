@@ -2,8 +2,7 @@ debugger;
 // Assignment Code
 var generateBtn = document.querySelector("#genenrate"); 
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
 
 // Write password to the #password input
 function writePassword() {
@@ -21,8 +20,8 @@ function generatePassword() {
   "Select a length between 8 and 128 characters"
 ); 
 
+// Alert boxes
 if (lengthOfPassword >= 8 && lengthOfPassword <= 128) {
-  // Alerts
   var resultSpecial = confirm("Click ok to confirm special characters");
   var resultNumeric = confirm("Click ok to confirm numeric characters");
   var resultLower = confirm("Click ok to confirm lowercase characters");
@@ -98,7 +97,8 @@ function getNumber() {
 }
 
 
-
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 
 
