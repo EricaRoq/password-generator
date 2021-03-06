@@ -1,4 +1,4 @@
-debugger;
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -94,6 +94,11 @@ function getNumber() {
 
   creatingPassword.push(holdNumber);
 }
+
+creatingPassword.sort(function (a, b) {
+  return 0.5 - Math.random();
+});
+return creatingPassword.join("");
 
 
 
