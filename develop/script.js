@@ -1,3 +1,8 @@
+// Function to generate values
+var symbol = "~{}[];:<>!@#$%^&*()_+?"
+var number = "1234567890"
+var lowerCase ="abcdefghijklmnopqrstuvwxyz"
+var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -11,100 +16,50 @@ function writePassword() {
 
 }
 
-// Generate Password Function
+// Required Characters
 
-function generatePassword() {
-  var lengthOfPassword = prompt(
-  "Select a length between 8 and 128 characters"
-); 
+function generatePassword(){
+  var finalPassword = "";
+  var approveCharacters = "";
+ 
+// Password length
+  if(passLength < 8){
+    return alert("Password must be at least 8 characters");
+  }else if (passLength > 128){
+    return alert("Password must be 128 characters or less");
+  }
 
-// Alert boxes
-if (lengthOfPassword >= 8 && lengthOfPassword <= 128) {
-  var includeSpecial = confirm("Click ok to confirm special characters");
-  var includeNumber = confirm("Click ok to confirm numeric characters");
-  var includeLower = confirm("Click ok to confirm lowercase characters");
-  var includeUpper = confirm("Click ok to confirm uppercase characters");
-} else {
-  alert(
-    "Password must be a length of at least 8 characters and no more than 128 characters"
-  );
-  return "";
+// Prompt boxes
+  var passLength = prompt("How many characters would you like to have");
+
+  var passUpper = confirm("Please click to confirm uppercase");
+
+  if (passUpper === true){
+    approveCharacters += lowerCase;
+  } 
+
+  var passSymbol = confirm("Please click to confirm symbol");
+
+  if (passSymbol === true){
+    approveCharacters += symbol;
+  }
+
+  var passNumber = confirm("Please click to confirm number");
+
+  if (passNumber === true){
+    approveCharacters += number;
+  }
+
+  // For loop
+  for(let i=0; i < passLength; i++){
+    var randomInit = Math.floor(Math.random() * approveCharacters.length);
+
+    var randomInput = approveCharacters[randomInit];
+    finalPassword += randomInput
+  }
+  return finalPassword;
 }
-
-if (includeSpecial || includeNumber || includeLower || includeUpper) {
-} else {
-  alert("Must have at least 1 special character");
-  return "";
-}
-
-var creatingPassword = [];
-var counter = 1;
-
-// For loop
-for (let index = 1; index <= lengthOfPassword; index = counter) {
-  if (includeSpecial == true && counter <= lengthOfPassword) {
-    getSymbol();
-    counter++;
-  }
-
-  if (includeNumeric == true && counter <= lengthOfPassword) {
-    getNumber();
-    counter++;
-  }
-
-  if (includeLower == true && counter <= lengthOfPassword) {
-    getLower();
-    counter++;
-  }
-
-  if (includeUpper == true && counter <= lengthOfPassword) {
-    getUpper();
-    counter++;
-  }
-}
-
-// Symbal character
-function getSymbol() {
-  var symbol = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
-  var holdSymbol = symbol[Math.floor(Math.random() * symbol.length)];
   
-  creatingPassword.push(holdSymbol);
-}
-
-// Uppercase character
-function getUpper() {
-  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var holdUpper = upperCase[Math.floor(Math.random() * upperCase.length)];
-
-  creatingPassword.push(holdUpper);
-}
-
-// Lowercase character
-function getLower() {
-  var lowercase = "abcdefghijklmnopqrstuvwxyz";
-  var holdLower = lowercase[Math.floor(Math.random() * lowercase.length)];
-
-  creatingPassword.push(holdLower);
-}
-
-// Number character
-function getNumber() {
-  var number1 = "1234567890";
-  var holdNumber = number1[Math.floor(Math.random() * number1.length)];
-
-  creatingPassword.push(holdNumber);
-}
-
-creatingPassword.sort(function (a, b) {
-  return 0.5 - Math.random();
-});
-return creatingPassword.join("");
-
-}
-
-
-
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
