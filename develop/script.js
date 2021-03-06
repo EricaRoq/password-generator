@@ -100,9 +100,11 @@ creatingPassword.sort(function (a, b) {
 });
 return creatingPassword.join("");
 
+}
+
+
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-}
