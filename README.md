@@ -23,7 +23,7 @@ you then choose lowercase, uppercase, numeric, and/or special characters.
 ![](./assets/images/demo.png)
 
 # Link to deployed application
-
+[Deployed-application](https://ericaroq.github.io/password-generator/)
 
 # Resources and contributers
 
